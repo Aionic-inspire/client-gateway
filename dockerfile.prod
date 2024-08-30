@@ -25,6 +25,7 @@ COPY . .
 # RUN npm run test
 RUN npm run build
 
+#instalar dependencias solo de producción
 RUN npm ci -f --only=production && npm cache clean --force
 
 
